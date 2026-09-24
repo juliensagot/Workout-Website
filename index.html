@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Workout — Make every set count.</title>
+<meta name="description" content="Track, train, transform. Build your routines, log every set, and see your strength grow. Your plan, with room for life.">
+<link rel="canonical" href="https://workout.juliensagot.fr/">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+<!-- Safari Smart App Banner -->
+<meta name="apple-itunes-app" content="app-id=1405620182">
+
+<!-- Link previews (iMessage, Slack, …) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://workout.juliensagot.fr/">
+<meta property="og:title" content="Workout — Make every set count.">
+<meta property="og:description" content="Track, train, transform. Build your routines, log every set, and see your strength grow.">
+<meta property="og:image" content="https://workout.juliensagot.fr/images/icon.png">
+
+<!-- X app card: adds an install button to posts linking here (only once the app is live on the App Store) -->
+<meta name="twitter:card" content="app">
+<meta name="twitter:site" content="@theworkoutapp">
+<meta name="twitter:description" content="Track, train, transform. Build your routines, log every set, and see your strength grow.">
+<meta name="twitter:app:name:iphone" content="Workout">
+<meta name="twitter:app:id:iphone" content="1405620182">
+
+<style>
+:root {
+  --background: #f5f5f7;
+  --surface: #ffffff;
+  --text: #1d1d1f;
+  --secondary: #6e6e73;
+  --separator: rgba(0, 0, 0, 0.08);
+  --accent: #0071e3;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0e0f11;
+    --surface: #1b1d21;
+    --text: #f5f5f7;
+    --secondary: #a1a1a6;
+    --separator: rgba(255, 255, 255, 0.1);
+    --accent: #2997ff;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.content {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* MARK: Hero */
+
+.hero {
+  padding-top: 72px;
+  padding-bottom: 48px;
+  text-align: center;
+}
+
+.hero .icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 27px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+}
+
+.hero .name {
+  margin: 20px 0 0;
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+.hero h1 {
+  margin: 4px 0 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: clamp(40px, 7vw, 64px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.hero .lead {
+  max-width: 560px;
+  margin: 20px auto 0;
+  font-size: 19px;
+  color: var(--secondary);
+}
+
+.hero .badge {
+  display: inline-block;
+  margin-top: 32px;
+}
+
+.hero .badge img {
+  display: block;
+  height: 54px;
+  width: auto;
+}
+
+/* MARK: Screenshots */
+
+.screenshots {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: max(24px, calc((100vw - 1040px) / 2 + 24px));
+  padding: 8px max(24px, calc((100vw - 1040px) / 2 + 24px)) 24px;
+  scrollbar-width: none;
+}
+
+.screenshots::-webkit-scrollbar { display: none; }
+
+.screenshots picture {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+.screenshots img {
+  display: block;
+  width: 240px;
+  height: auto;
+  aspect-ratio: 1320 / 2868;
+  border-radius: 24px;
+  background: #1b1d21;
+}
+
+/* MARK: Features */
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin: 40px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.features li {
+  padding: 24px;
+  border-radius: 20px;
+  background: var(--surface);
+}
+
+.features h2 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.features p {
+  margin: 8px 0 0;
+  font-size: 15px;
+  color: var(--secondary);
+}
+
+/* MARK: Footer */
+
+.footer {
+  margin-top: 72px;
+  padding-top: 24px;
+  padding-bottom: 48px;
+  border-top: 1px solid var(--separator);
+  font-size: 13px;
+  color: var(--secondary);
+}
+
+.footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+
+.footer p { margin: 12px 0 0; }
+
+@media (max-width: 600px) {
+  .hero { padding-top: 48px; }
+  .hero .lead { font-size: 17px; }
+  .screenshots img { width: 200px; border-radius: 20px; }
+}
+</style>
+</head>
+
+<body>
+<main>
+  <header class="hero content">
+    <img class="icon" src="images/icon.png" alt="Workout app icon" width="120" height="120">
+    <p class="name">Workout</p>
+    <h1>Make every set count.</h1>
+    <p class="lead">Plan your strength training, record each session, and see your progress over time.</p>
+    <a class="badge" href="https://apps.apple.com/app/id1405620182">
+      <img src="images/app-store-badge.svg" alt="Download on the App Store" width="162" height="54">
+    </a>
+  </header>
+
+  <section class="screenshots" aria-label="Screenshots">
+    <picture>
+      <source srcset="images/screens/dark/01-workout.jpg" media="(prefers-color-scheme: dark)">
+      <img src="images/screens/light/01-workout.jpg" alt="Make every set count. Log weights and reps. Keep your last session in view." width="240" height="522">
+    </picture>
+    <picture>
+      <source srcset="images/screens/dark/02-progress.jpg" media="(prefers-color-scheme: dark)">
+      <img src="images/screens/light/02-progress.jpg" alt="See yourself get stronger. Follow your progress. Celebrate personal bests." width="240" height="522">
+    </picture>
+    <picture>
+      <source srcset="images/screens/dark/03-programs.jpg" media="(prefers-color-scheme: dark)">
+      <img src="images/screens/light/03-programs.jpg" alt="Your plan. Room for life. Build your program. Reschedule when life happens." width="240" height="522">
+    </picture>
+    <picture>
+      <source srcset="images/screens/dark/04-routines.jpg" media="(prefers-color-scheme: dark)">
+      <img src="images/screens/light/04-routines.jpg" alt="Make your routine yours. Choose your exercises. Build a session that fits." width="240" height="522">
+    </picture>
+    <picture>
+      <source srcset="images/screens/dark/05-supersets.jpg" media="(prefers-color-scheme: dark)">
+      <img src="images/screens/light/05-supersets.jpg" alt="Keep your supersets flowing. Pair your exercises. Track every set together." width="240" height="522" loading="lazy">
+    </picture>
+    <picture>
+      <source srcset="images/screens/dark/06-techniques.jpg" media="(prefers-color-scheme: dark)">
+      <img src="images/screens/light/06-techniques.jpg" alt="Go beyond straight sets. Drop sets. Rest-pause sets. Log the way you train." width="240" height="522" loading="lazy">
+    </picture>
+    <picture>
+      <source srcset="images/screens/dark/07-timer.jpg" media="(prefers-color-scheme: dark)">
+      <img src="images/screens/light/07-timer.jpg" alt="Time your rest. Find your rhythm. Keep the countdown in view. Focus on the next set." width="240" height="522" loading="lazy">
+    </picture>
+    <picture>
+      <source srcset="images/screens/dark/08-calendar.jpg" media="(prefers-color-scheme: dark)">
+      <img src="images/screens/light/08-calendar.jpg" alt="See your consistency grow. Look back at your sessions. Keep your training in view." width="240" height="522" loading="lazy">
+    </picture>
+    <picture>
+      <source srcset="images/screens/dark/09-exercises.jpg" media="(prefers-color-scheme: dark)">
+      <img src="images/screens/light/09-exercises.jpg" alt="Find your next exercise. Explore the exercise library. Build your next session." width="240" height="522" loading="lazy">
+    </picture>
+  </section>
+
+  <section class="content">
+    <ul class="features">
+      <li>
+        <h2>Your training, your way</h2>
+        <p>Start with a built-in program or create your own. Choose your exercises, organize your routines, and schedule your sessions. When plans change, postpone a workout and keep going.</p>
+      </li>
+      <li>
+        <h2>Log every effort</h2>
+        <p>Record weights and repetitions, add notes, and review previous sessions as you train. Use supersets, drop sets, and rest-pause sets to capture the way you actually work out.</p>
+      </li>
+      <li>
+        <h2>See your progress</h2>
+        <p>Explore exercise progression charts, estimated one-rep max, and personal records. Look back through your training calendar and see the consistency behind your progress.</p>
+      </li>
+      <li>
+        <h2>Find your rhythm</h2>
+        <p>Keep your rest countdown in view and get ready for the next set. Browse the illustrated exercise library to build your next session.</p>
+      </li>
+    </ul>
+  </section>
+</main>
+
+<footer class="footer content">
+  <nav>
+    <a href="PrivacyPolicy.html">Privacy Policy</a>
+    <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a>
+    <a href="https://x.com/theworkoutapp">@theworkoutapp on X</a>
+  </nav>
+  <p>© 2026 Julien Sagot</p>
+</footer>
+</body>
+</html>
