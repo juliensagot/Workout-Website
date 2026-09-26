@@ -354,7 +354,7 @@ kbd {
 
 <p>Apple Health export is optional and off by default. If you enable it and grant permission, Workout saves completed trainings to Apple Health as strength-training workouts, including their start and end times, title, and a workout identifier. Workout does not request access to read your existing Health records.</p>
 
-<p>You can disable future exports in Workout’s training settings or revoke permission in Apple’s settings. This does not remove workouts already saved to Health; manage those records in Apple Health. Deleting a training in Workout does not delete its Health copy. Apple controls Health storage and any Health synchronization you enable. See Apple’s Health privacy information (<a href="https://www.apple.com/legal/privacy/data/en/health-app/">https://www.apple.com/legal/privacy/data/en/health-app/</a>).</p>
+<p>You can disable future exports in Workout’s training settings or revoke permission in Apple’s settings. This does not remove workouts already saved to Health; manage those records in Apple Health. While export is on, deleting a training in Workout also deletes the workout Workout saved for it in Health. Apple controls Health storage and any Health synchronization you enable. See Apple’s Health privacy information (<a href="https://www.apple.com/legal/privacy/data/en/health-app/">https://www.apple.com/legal/privacy/data/en/health-app/</a>).</p>
 
 <p>Rest-timer notifications and alarms are also controlled by device permissions. You can change those permissions in system settings.</p>
 
@@ -396,7 +396,7 @@ kbd {
 
 <ul>
 <li>Local records: remain on your device until deleted. Removing the app’s data is separate from deleting device backups, exported files, or copies held by another service. Offloading an app can retain its data.</li>
-<li>Exported files and Health records: remain where you saved them until you delete them there. Removing a source record in Workout does not recall an exported copy.</li>
+<li>Exported files and Health records: remain where you saved them until you delete them there. Removing a source record in Workout does not recall an exported copy, except that deleting a training while Health export is on also deletes its Health workout.</li>
 <li>Subscription information: is retained while needed to verify access, restore purchases, resolve purchase disputes, and meet applicable legal obligations. You can request deletion of information held on my behalf. Deleting that information or uninstalling Workout does not cancel an Apple subscription; manage cancellation through Apple.</li>
 <li>Support correspondence: is kept while needed to resolve your request and related follow-up, or longer where a legal obligation or dispute requires it.</li>
 <li>Analytics: TelemetryDeck does not currently specify a fixed deletion schedule for its anonymized events. Uninstalling Workout does not erase previously sent events. Identifiable diagnostic information, if present, is subject to applicable deletion rights rather than an assumption that it is anonymous.</li>
